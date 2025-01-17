@@ -1,11 +1,15 @@
 
 
 
-class ProductList extends React.Component{	
+class ProductList extends React.Component{
+	handleProductUpVote(productId){
+          console.log(productId +' was upvoted');
+		}
  render(){
    const products = Seed.products.sort((a, b) => (
       b.votes - a.votes
     ));	 
+
    const productComponents = Seed.products.map((product) => 	 
     (
       <Product
@@ -17,6 +21,7 @@ class ProductList extends React.Component{
        votes = {product.votes}
        submitterAvatarUrl={product.submitterAvatarUrl}
        productImageUrl={product.productImageUrl}
+       onVote = {this.handleProductUpVote}
       />
     ));
 
@@ -33,6 +38,8 @@ class ProductList extends React.Component{
 
 class Product extends React.Component{
   render(){
+   
+
 
    return(
      <div className="item">
@@ -41,7 +48,7 @@ class Product extends React.Component{
        </div>
        <div className="middle aligned content">
        <div className='header'>
-            	<a>
+            	<a onClick = {() => this.props.onVote(this.props.id)}>
               		<i className='large caret up icon' />
             	</a>
             	{this.props.votes}
@@ -65,7 +72,6 @@ class Product extends React.Component{
 
 ReactDOM.render(<ProductList />,
         document.getElementById("content"));
-
 
 
 
