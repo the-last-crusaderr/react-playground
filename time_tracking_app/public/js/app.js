@@ -14,14 +14,14 @@ state = {
           project:'To get physically fit',
           elapsed:8986300,
 	  id: uuid.v4(),
-          runningSince:{Date.now()},	   
+          runningSince:Date.now(),	   
    },  
    {
 	  title:'Practice Meditation',
           project:'To get mentally fit',
           elapsed:328986300,
 	  id: uuid.v4(),
-          runningSince:{Date.now()},
+          runningSince:Date.now(),
 	 
    },
  ]
@@ -224,8 +224,17 @@ class Timer extends React.Component {
 	handleTrashClick = () => {
             this.props.onTrashClick(this.props.id)
 		}
+
+       componentDidMount(){
+        this.forceUpdateInterval = setInterval( () => this.forceUpdate(), 50)
+	       }
+
+	componentWillUnmount(){
+          clearInterval(this.forceUpdateInterval)
+		}       
+		
   render() {
-    const elapsedString = helpers.renderElapsedString(this.props.elapsed);
+    const elapsedString = helpers.renderElapsedString(this.props.elapsed,this.props.runningSince);
     return (
       <div className='ui centered card'>
         <div className='content'>
