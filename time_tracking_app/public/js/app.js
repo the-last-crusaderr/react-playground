@@ -14,14 +14,14 @@ state = {
           project:'To get physically fit',
           elapsed:8986300,
 	  id: uuid.v4(),
-          runningSince:{null},	   
+          runningSince:{Date.now()},	   
    },  
    {
 	  title:'Practice Meditation',
           project:'To get mentally fit',
           elapsed:328986300,
 	  id: uuid.v4(),
-          runningSince:{null},
+          runningSince:{Date.now()},
 	 
    },
  ]
