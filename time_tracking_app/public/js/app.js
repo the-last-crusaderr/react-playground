@@ -29,6 +29,15 @@ state = {
 
 
 
+componentDidMount(){
+   
+   this.loadFromServer();
+   setInterval(this.loadFromServer, 5000)
+
+}
+
+   loadFromServer = () => { client.getTimers( (serverLoads) => { this.setState({timers: serverLoads, })}     )}
+
 // Inside TimersDashboard
   handleCreateFormSubmit = (timer) => {
     this.createTimer(timer);
