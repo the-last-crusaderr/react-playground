@@ -46,12 +46,18 @@ componentDidMount(){
 
  handleTrashClick = (id) => {
    console.log(id); 
-   const updatedTimers = this.state.timers.filter( (timer) => {
-       return timer.id !== id;
-	   }   )
-
-     this.setState({timers: updatedTimers,})
+   const updatedTimers = this.deleteTimer(id)
 	 }
+
+
+deleteTimer = (timerId) => {
+    this.setState({
+      timers: this.state.timers.filter(t => t.id !== timerId),
+    });
+    client.deleteTimer(
+      { id: timerId }
+);
+  };
 
             
 
@@ -61,7 +67,8 @@ componentDidMount(){
     const t = helpers.newTimer(timer);
     this.setState({
       timers: this.state.timers.concat(t),
-    }); 
+    });
+    client.createTimer(t)
   };  
 
 
@@ -82,16 +89,25 @@ createTimer = (timer) => {
 
  handleEditFormSubmit = (args) => {
      
-     const updatedTimers = this.state.timers.map( (timer) => {
-	 if(args.id === timer.id){
-           return Object.assign({},timer,{title:args.title, project:args.project,})
-		 } 
-         else
-	   return timer	 
-	     }  )
-    // console.log(args.id,this.state.timers[0].id,updatedTimers)
+     const updatedTimers = this.updateTimer(args)   // console.log(args.id,this.state.timers[0].id,updatedTimers)
      this.setState({timers: updatedTimers});
 	 }
+
+
+updateTimer = (attrs) => {
+    this.setState({
+      timers: this.state.timers.map((timer) => {
+        if (timer.id === attrs.id) {
+          return Object.assign({}, timer, {
+            title: attrs.title,
+            project: attrs.project,
+});
+} else {
+  return timer;
+        }
+}), });
+    client.updateTimer(attrs);
+};
 
 
   handleStartClick = (timerId) => {
@@ -114,7 +130,14 @@ startTimer = (timerId) => {
         } else {
           return timer;
 } }),
-}); };
+});
+  
+  client.startTimer(
+      { id: timerId, start: now }
+);
+
+
+    };
 
 
 stopTimer = (timerId) => {
@@ -130,7 +153,12 @@ stopTimer = (timerId) => {
         } else {
           return timer;
 } }),
-}); };
+});i
+
+ client.stopTimer(
+      { id: timerId, stop: now })
+
+};
 
 
 
