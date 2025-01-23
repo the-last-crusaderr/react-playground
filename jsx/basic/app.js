@@ -1,7 +1,8 @@
 import React from 'react'
 
 class App extends React.Component {
-  render() {
+ 
+ render() {
     const klass = classnames({
       box: true, // always apply the box class
       alert: this.props.isAlert, // if a prop is set
