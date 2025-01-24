@@ -3,6 +3,7 @@ import styles from '../Switch.css';
 
 const CREDITCARD = 'Creditcard';
 const BTC = 'Bitcoin';
+const UPI = 'UPI'
 
 const Choice = function (props) {
   const cssClasses = [];
@@ -50,6 +51,12 @@ class Switch extends React.Component {
           active={this.state.payMethod === BTC}
           label='Pay with Bitcoin'
         />
+
+       <Choice
+          onClick={this.select(UPI)}
+          active={this.state.payMethod === UPI}
+          label='Pay with UPI'
+        /> 
 
         Paying with: {this.state.payMethod}
       </div>

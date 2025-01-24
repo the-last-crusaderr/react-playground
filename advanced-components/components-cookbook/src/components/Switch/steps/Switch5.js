@@ -3,6 +3,7 @@ import styles from '../Switch.css';
 
 const CREDITCARD = 'Creditcard';
 const BTC = 'Bitcoin';
+const UPI = 'UPI';
 
 class Switch extends React.Component {
   state = {
@@ -41,6 +42,7 @@ class Switch extends React.Component {
       <div className='switch'>
         {this.renderChoice(CREDITCARD)}
         {this.renderChoice(BTC)}
+	{this.renderChoice(UPI)}
         Pay with: {this.state.payMethod}
       </div>
     );
