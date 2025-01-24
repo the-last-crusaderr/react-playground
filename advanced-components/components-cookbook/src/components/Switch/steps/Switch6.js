@@ -5,6 +5,7 @@ const CREDITCARD = 'Creditcard';
 const BTC = 'Bitcoin';
 const UPI = 'UPI'
 
+
 const Choice = function (props) {
   const cssClasses = [];
 
