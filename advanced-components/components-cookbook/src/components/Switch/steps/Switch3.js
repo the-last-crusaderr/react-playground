@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 
 const CREDITCARD = 'Creditcard';
 const BTC = 'Bitcoin';
+const UPI = 'UPI';
 
 class Switch extends React.Component {
   state = {
@@ -28,8 +29,15 @@ class Switch extends React.Component {
           className='choice'
           onClick={this.select(BTC)} // ... and this
         >Bitcoin</div>
+        <div
+          className='choice'
+          onClick={this.select(UPI)} // ... and this
+        >UPI</div>
+
+
         Pay with: {this.state.payMethod}
       </div>
+
     );
   }
 }
