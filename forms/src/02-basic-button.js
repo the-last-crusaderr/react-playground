@@ -14,7 +14,7 @@ module.exports = class extends React.Component {
   render() {
     return (
       <div>
-        <h1>What do you think of React?</h1>
+        <h1>What do you think of React??</h1>
 
         <button
           name='button-1'
