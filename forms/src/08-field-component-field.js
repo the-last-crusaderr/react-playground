@@ -10,6 +10,7 @@ module.exports = class extends React.Component {
     onChange: PropTypes.func.isRequired,
   };
 
+
   state = {
     value: this.props.value,
     error: false,
