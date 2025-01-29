@@ -3,8 +3,7 @@
 
 
 // truncate string length to length given to args
-truncate(s,length){
- 
+function truncate(s,length){ 
  if(s.length < length)
    return s.slice(0,length) 
  return s
@@ -14,7 +13,7 @@ truncate(s,length){
 
 
 // capitalise the first letter and lower case the case
-capitalise(s){
+function capitalise(s){
     
     return s.charAt(0).toUpperCase() + s.slice(1).toLowerCase()
 	}
@@ -23,7 +22,7 @@ capitalise(s){
 
 
 // change the string to camelCase form
-camelCase(s){
+function camelCase(s){
   const words = string.split(/[\s|\-|_]+/);
   return [
     words[0].toLowerCase(),
