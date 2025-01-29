@@ -10,7 +10,6 @@ import Modash from './Modash'
 
 describe('testing the assertion library', () => {
 
-
   it('testing of true', () => {
      expect(true).toBe(true)
 	  })
@@ -23,7 +22,14 @@ describe('testing the assertion library', () => {
 
 
 
+describe('Modash',() => {
 
+ const string = 'there was one catch, and that was CATCH-22'; 
+ it(('trucate() function to truncate a string'), () => {
+     expect(Modash.truncate(string,19))
+     .toEqual('there was one catch')
+	 }   )
+	}   )
 
 
 

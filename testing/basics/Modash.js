@@ -4,7 +4,7 @@
 
 // truncate string length to length given to args
 function truncate(s,length){ 
- if(s.length < length)
+ if(s.length > length)
    return s.slice(0,length) 
  return s
 	}
