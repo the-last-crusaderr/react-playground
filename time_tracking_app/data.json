@@ -10,20 +10,21 @@
         "title": "Clear paper jam",
         "project": "Office Chores",
         "elapsed": 1273998,
-        "id": "a73c1d19-f32d-4aff-b470-cea4e792406a"
+        "id": "a73c1d19-f32d-4aff-b470-cea4e792406a",
+        "runningSince": 1456468632194
     },
     {
         "title": "Ponder origins of universe",
         "project": "Life Chores",
         "id": "2c43306e-5b44-4ff8-8753-33c35adbd06f",
         "elapsed": 280954804292,
-        "runningSince": null
+        "runningSince": 1737614076345
     },
     {
-        "title": "Finish the setup as soon as possible",
-        "project": "Nodejs",
-        "id": "fb5dbbf4-fe43-43a5-abc7-44b268255b2d",
-        "elapsed": 2744,
-        "runningSince": 1737180729621
+        "title": "Finish what you start",
+        "project": "Be focussed at task at hands",
+        "id": "d361c1f3-94dc-4da9-989e-073bbb5cd05e",
+        "elapsed": 0,
+        "runningSince": 1737614399184
     }
 ]
