@@ -59,6 +59,7 @@ describe('App', () => {
       });
     });
 
+
     describe('and then submits the form', () => {
       beforeEach(() => {
         const form = wrapper.find('form').first();
@@ -87,3 +88,4 @@ describe('App', () => {
     });
   });
 });
+
