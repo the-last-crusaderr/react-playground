@@ -5,6 +5,7 @@ import React from 'react';
 import FoodSearch from '../src/FoodSearch';
 import Client from '../src/Client';
 
+
 jest.mock('../src/Client');
 
 describe('FoodSearch', () => {
