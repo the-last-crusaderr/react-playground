@@ -1,6 +1,8 @@
 import React from 'react';
+import CreateHistory from 'history/createBrowserHistory'
 
 
+const history = CreateHistory()
 
 class App extends React.Component {
   render() {
@@ -14,14 +16,14 @@ class App extends React.Component {
 
         <ul>
           <li>
-            <a href='/atlantic'>
+            <Link to='/atlantic'>
               <code>/atlantic</code>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href='/pacific'>
+            <Link to='/pacific'>
               <code>/pacific</code>
-            </a>
+            </Link>
           </li>
         </ul>
 
@@ -36,6 +38,23 @@ class App extends React.Component {
 }
 
 
+const Link = ({to,children}) => {
+
+ return(
+<a onClick={ (e)=> { e.preventDefault()  
+        history.push(e)
+} }
+href = {to}
+>
+ {children}
+</a>
+ )
+ }
+
+
+
+
+
 
 const Route = ({path,component}) => {
 
@@ -45,6 +64,7 @@ const Route = ({path,component}) => {
    else
     return null	   
 	}
+
 
 
 const Atlantic = () => (
