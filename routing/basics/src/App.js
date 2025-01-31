@@ -1,5 +1,7 @@
 import React from 'react';
 
+
+
 class App extends React.Component {
   render() {
     return (
@@ -26,10 +28,24 @@ class App extends React.Component {
         <hr />
 
         {/* We'll insert the Route components here */}
+	<Route path='/atlantic' component={Atlantic}/>
+        <Route path='/pacific' component={Pacific}/>
       </div>
     );
   }
 }
+
+
+
+const Route = ({path,component}) => {
+
+   const pathName = window.location.pathname
+   if(pathName.match(path))
+     return React.createElement(component)
+   else
+    return null	   
+	}
+
 
 const Atlantic = () => (
   <div>
@@ -50,5 +66,13 @@ const Pacific = () => (
     </p>
   </div>
 );
+
+
+
+
+
+
+
+
 
 export default App;
