@@ -11,6 +11,13 @@ public class PrintingContainers{
       c.add("columbia");
       c.add("brazil");
       c.add("argentina");
+
+     Iterator<String> it = c.iterator();
+     while(it.hasNext()){
+      System.out.println(it.next());
+	     }
+
+
       return c;
 	   }
 
@@ -22,6 +29,16 @@ public class PrintingContainers{
      m.put("australia","australia");
      m.put("mexico","north america");
      m.put("eucador","south america");
+     
+     Iterator<String> it = m.values().iterator();
+     Iterator<String> keys = m.keySet().iterator();
+
+    while(it.hasNext()){
+      System.out.println(it.next()+" "+ keys.next());
+             }   
+
+
+
      return m;
 	   }
 
