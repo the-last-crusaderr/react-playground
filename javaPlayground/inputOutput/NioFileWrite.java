@@ -4,8 +4,6 @@ import java.io.IOException;
 
 class NioFileWrite{
 
-
-
 public static void main(String[] args){
 try{ 
  Path path = Paths.get("nOut");
