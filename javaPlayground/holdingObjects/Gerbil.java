@@ -1,6 +1,5 @@
 import java.util.*;
 
-
 public class Gerbil{
    
    private int gerbilNum;
