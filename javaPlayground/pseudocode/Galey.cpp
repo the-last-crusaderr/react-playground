@@ -7,7 +7,25 @@ int main(){
 
  int n = 3;
 
-// men pref
+
+vector<vector<int>> menPref = {
+    {1, 0, 2},  // M0 prefers W1 > W0 > W2
+    {0, 2, 1},  // M1 prefers W0 > W2 > W1
+    {2, 1, 0}   // M2 prefers W2 > W1 > W0
+};
+
+vector<vector<int>> womenPref = {
+    {2, 0, 1},  // W0 prefers M2 > M0 > M1
+    {1, 0, 2},  // W1 prefers M1 > M0 > M2
+    {0, 2, 1}   // W2 prefers M0 > M2 > M1
+};
+
+
+
+
+
+
+/* men pref
  vector<vector<int> > menPref = {
         {0, 1, 2},  // man 0
         {1, 2, 0},  // man 1
@@ -22,7 +40,7 @@ int main(){
         {2, 1, 0}   // woman 2
     };
 
-
+*/
     vector<int> menPartner(n,-1);
     vector<int> womenPartner(n,-1);
     vector<int> nextProposal(n,0);
