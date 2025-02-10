@@ -1,0 +1,18 @@
+
+
+
+
+procedure selectionSort(integer:sequence a1,a2,a3....an)
+ location
+ for(i:= 0 to n-1)
+   location := ai	 
+   for(j:=i+1 to n-1)
+     if(aj < least)
+      least:= aj
+      location:= j
+   
+   switch ai with alocation
+
+  return {list of sorted sequence}	   
+      
+    		   
