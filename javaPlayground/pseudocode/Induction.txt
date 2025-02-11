@@ -1,0 +1,17 @@
+
+
+
+
+To prove: P(n) is true for all positive integer 
+
+Steps To Prove It:  1.P(1) is true
+         2. forAllk(P(k) -> P(k+1))
+
+Assume that P(n) is false for a particular n
+
+
+
+Strong Induction 
+
+-> Base Steps holds
+-> To prove P(K+1) --- solve for p(1) and p(2)........p(k)
