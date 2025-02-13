@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-
+// program to stablise the relationship in a society
 int main(){
 
  int n = 3;
