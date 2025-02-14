@@ -1,0 +1,57 @@
+
+
+
+Objective : 
+1. Building a system that supports 1 users
+2. Scaling it up to serve million of users
+
+
+Requirement - 
+- Server serves both to web and mobile apps
+
+
+Building step by step:-
+There is always area of endless improvement and gradual refinement
+
+1. Single Server Setup
+
+- Everything is running on same server
+  - Web Server 
+  - Database
+  - Cache
+
+
+
+
+2. Separating Web and Data Tier
+
+- Separation allows them to be scaled independently
+- Choosing between SQL and NOSQL based on specific use case
+
+
+
+3. Horizontal(Scale out) VS Vertical(Scale up) Scaling
+
+- Vertical - no failover and redundancy, hard limit 
+- Horizontal - Desirable in large scale application
+
+
+
+
+4. Load Balancer
+
+- LB evenly distributes the incoming request among web server
+- Client is connected through public IP of LB and web server has private IP
+
+
+
+
+
+5. DataBase Replication
+
+- Divides the data tier into master-slave
+- All write operation must be sent to Master 
+- All read operation must be sent to Slave
+
+
+
