@@ -55,3 +55,29 @@ There is always area of endless improvement and gradual refinement
 
 
 
+
+6. Cache
+
+- Cache is temporary storage that stores the result of expensive operation or frequently accessed data
+  so that subsequent request are served more quickly
+- Read about Memcached  
+
+
+
+
+7. CDN
+- Sharing static asssets directly from proximate CDN, hence improving the inital load time
+
+
+8. Choose Stateless webtier for better scaling
+
+9. Scale to multi data center setup with geoDNS
+
+9a. Add message queue if required
+
+10. Adds tools like logging, metrics,montioring and automation
+
+11. Scaling Data Tier
+- Sharding of database is accepted approach
+
+
