@@ -4,6 +4,7 @@
 using namespace std;
 
 
+
 int longestConsecutive(vector<int> nums){
 
  unordered_set<int> store(nums.begin(),nums.end());
@@ -14,7 +15,22 @@ int longestConsecutive(vector<int> nums){
 
 
  for(int num:nums){
-   // let current be starting point
+    
+    current = num;
+    streak = 0;
+
+    if(store.find(current-1) == store.end()){
+
+    while(store.find(current) != store.end()){
+      current++;
+      streak++;
+	    }	
+
+    res = max(res,streak);
+
+    }
+
+   /* let current be starting point
    current = num;
    streak = 0;
    while( store.find(current) != store.end()){
@@ -24,7 +40,7 @@ int longestConsecutive(vector<int> nums){
 
     res = max(res, streak);	   
 
-
+*/
 	 }
  return res;
 	}
