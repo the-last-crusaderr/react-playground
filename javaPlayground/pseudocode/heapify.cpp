@@ -2,6 +2,7 @@
 using namespace std;
 
 
+
 // heapify from the point i
 
 int arr[100];
