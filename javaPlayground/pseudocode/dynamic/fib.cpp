@@ -11,7 +11,7 @@ int fib(int n){
      return arr[n];	   
 
    if(n==1 || n ==2)
-     return 1;
+     return arr[n] = 1;
 
    return arr[n] = fib(n-1) + fib(n-2);  
 
@@ -20,6 +20,6 @@ int fib(int n){
 
 int main(){
    memset(arr, -1, sizeof(arr));
-   cout << fib(10) << endl;
+   cout << fib(20) << endl;
 
 	}
