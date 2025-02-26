@@ -3,7 +3,6 @@
 using namespace std;
 
 
-
 int arr[100];
 int countFun;
 int countRaw;
