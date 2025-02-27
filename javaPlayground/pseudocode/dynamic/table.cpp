@@ -2,6 +2,7 @@
 using namespace std;
 
 
+
 void table(int n, int i){
 
   if(i > 10)
