@@ -1,8 +1,7 @@
 class Resource implements AutoCloseable {
     private String name;
-
-    // Constructor
-    public Resource(String name) {
+    private static Resource instance;    // Constructor
+    private Resource(String name) {
         this.name = name;
         System.out.println(name + " resource created.");
     }
@@ -10,11 +9,10 @@ class Resource implements AutoCloseable {
     // pubic static factory
     
     public static Resource factoryConstructor(String name){
-
-        Resource res = new Resource(name);
-        return res;
-
-	    }
+	    if(instance == null)
+	       instance = new Resource(name);	    
+             return instance;
+	  }
 
 
 
@@ -29,10 +27,11 @@ class Resource implements AutoCloseable {
     }
 
     public static void main(String[] args) {
-        try (Resource res = new Resource("TestResource")) {
-            res.use();
-	    Resource temp =  Resource.factoryConstructor("Build with static constructor");
-        } // close() is automatically called here
+       // try (Resource res = new Resource("TestResource")) {
+         //   res.use();
+	    Resource temp1 =  Resource.factoryConstructor("Build with static constructor");
+            Resource temp2 =  Resource.factoryConstructor("Build with static constructor");
+       // } // close() is automatically called here
     }
 }
 
