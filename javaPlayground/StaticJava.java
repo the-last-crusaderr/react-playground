@@ -17,7 +17,7 @@ class StaticTest{
 class StaticJava{
  
  public static void main(String[] args){
-      
+     System.out.println( System.getProperty("user.name"));
       System.out.println(StaticTest.throwAway);
       StaticTest.memberFunction(7,10);
 
